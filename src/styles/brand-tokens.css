@@ -1,0 +1,55 @@
+/*
+ * Tokens da identidade Tramma para a interface Tramma Inteligência Digital.
+ * Terracota digital aproximado a partir da referência visual enviada.
+ * Substituir pelos valores oficiais do manual de marca, caso disponíveis.
+ */
+:root {
+  --tramma-bg: #030817;
+  --tramma-surface: #07142b;
+  --tramma-blue: #147bff;
+  --tramma-purple: #8b2cff;
+
+  /* Terracota institucional e variação luminosa */
+  --tramma-terracotta: #c24724;
+  --tramma-terracotta-glow: #ff6a32;
+  --tramma-terracotta-soft: rgb(194 71 36 / 16%);
+  --tramma-terracotta-border: rgb(255 106 50 / 72%);
+  --tramma-terracotta-shadow: 0 0 18px rgb(255 106 50 / 28%);
+
+  --tramma-text: #f4f7ff;
+  --tramma-text-muted: #aab8d0;
+  --tramma-success: #25d978;
+}
+
+/* Ações principais: assinatura terracota */
+.tramma-button-primary {
+  color: var(--tramma-text);
+  background: linear-gradient(
+    135deg,
+    var(--tramma-terracotta),
+    var(--tramma-terracotta-glow)
+  );
+  border: 1px solid var(--tramma-terracotta-border);
+  box-shadow: var(--tramma-terracotta-shadow);
+}
+
+.tramma-button-primary:hover {
+  filter: brightness(1.08);
+}
+
+/* Navegação e elementos selecionados */
+.tramma-selected {
+  color: var(--tramma-terracotta-glow);
+  border-color: var(--tramma-terracotta-border);
+  background: var(--tramma-terracotta-soft);
+  box-shadow: var(--tramma-terracotta-shadow);
+}
+
+/* Destaques pequenos em cards e gráficos */
+.tramma-accent {
+  color: var(--tramma-terracotta-glow);
+}
+
+.tramma-accent-border {
+  border-color: var(--tramma-terracotta-border);
+}
