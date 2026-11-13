@@ -1,64 +1,48 @@
 # Identidade visual — Tramma Inteligência Digital
 
 ## Direção visual
+A interface combina tecnologia e inteligência digital com a assinatura visual da Tramma. A base permanece escura, com azul elétrico e roxo neon como cores tecnológicas e terracota como acento institucional reconhecível.
 
-A interface deve transmitir inteligência, tecnologia e sofisticação sem perder o vínculo visual com a marca Tramma. A referência aprovada combina uma base escura com azul elétrico, roxo neon e acentos terracota.
-
-## Paleta de cores
+## Paleta de marca e interface
 
 | Papel | Cor | HEX |
 |---|---|---|
 | Fundo principal | Preto azulado | `#030817` |
-| Superfícies e painéis | Azul-marinho profundo | `#07142B` |
+| Superfícies | Azul-marinho profundo | `#07142B` |
 | Azul tecnológico | Azul elétrico | `#147BFF` |
 | Roxo de apoio | Roxo neon | `#8B2CFF` |
-| Terracota institucional | Terracota Tramma | `#C24724` |
-| Terracota luminoso | Laranja terracota | `#FF6A32` |
+| Terracota Tramma | Cor institucional | `#C24724` |
+| Terracota luminoso | Realce e brilho | `#FF6A32` |
 | Texto principal | Branco frio | `#F4F7FF` |
 | Texto secundário | Cinza azulado | `#AAB8D0` |
 | Indicador positivo | Verde | `#25D978` |
 
-> O tom `#C24724` foi extraído visualmente da referência enviada. O tom `#FF6A32` funciona como variação luminosa para estados ativos e efeitos de brilho.
+Os tons terracota são referências digitais aproximadas da identidade visual apresentada. Se houver um manual oficial com códigos HEX/RGB, ele prevalece sobre esta aproximação.
 
-## Como introduzir o terracota
+## Aplicação do terracota
 
-O terracota deve aparecer como acento institucional recorrente, em equilíbrio com o azul e o roxo:
+O terracota deve ser visível na interface sem competir com o azul e o roxo:
 
-- **Navegação ativa:** borda terracota iluminada, fundo em degradê terracota escuro e ícone em laranja.
-- **Ações principais:** botões de destaque com terracota, brilho suave e texto branco; reservar o azul para ações secundárias.
-- **Cards e painéis:** filetes, cantos ou bordas com gradiente azul–terracota, sem contornar todos os painéis com a mesma intensidade.
-- **Ícones e indicadores:** terracota em ícones de seção, alertas positivos de marca e elementos selecionados.
-- **Gráficos:** usar terracota para uma série ou ponto de destaque, mantendo azul e roxo nas demais séries.
-- **Efeitos de luz:** reflexos terracota discretos em bases, divisórias e áreas de foco, como na imagem de referência.
-- **Logotipo:** preservar integralmente o arquivo original, sem redesenhar, deformar ou alterar proporções.
+- **Menu selecionado:** contorno terracota, ícone terracota e brilho externo suave; manter o fundo escuro.
+- **Botão principal/CTA:** preenchimento terracota Tramma, texto branco e hover em terracota luminoso.
+- **Ícones de marca:** terracota em ícones de destaque, sem colorir todos os ícones da interface.
+- **Cards:** usar filete ou pequeno detalhe terracota em cards prioritários; manter bordas azuis nos painéis de dados.
+- **Gráficos:** reservar terracota para uma série, meta ou ponto de atenção; azul e roxo continuam nas demais séries.
+- **Iluminação:** reflexos terracota localizados em divisórias, cantos e elementos ativos, inspirados na imagem de referência.
+- **Logotipo:** utilizar o arquivo original, preservando desenho, proporções, tipografia e cores.
 
-## Regras de equilíbrio
+## Hierarquia de uso
+1. Preto azulado e azul-marinho: estrutura e superfícies dominantes.
+2. Azul elétrico: dados, links, indicadores e elementos de tecnologia.
+3. Roxo neon: categorias secundárias e elementos complementares.
+4. Terracota Tramma: identidade, ações primárias e estados selecionados.
+5. Verde: estados de sucesso e crescimento, não como cor institucional.
 
-1. O preto azulado e o azul-marinho continuam dominando o espaço.
-2. Azul elétrico comunica tecnologia e dados; roxo diferencia recursos e categorias.
-3. Terracota deve reforçar a assinatura Tramma e destacar interações importantes, não dominar a interface.
-4. Evitar brilho intenso em todos os elementos ao mesmo tempo; priorizar hierarquia visual e legibilidade.
-5. Garantir contraste adequado e estados de foco acessíveis em desktop e dispositivos móveis.
+Evitar aplicar brilho em todos os componentes simultaneamente. O terracota deve funcionar como assinatura visual e guia de atenção.
 
-## Tokens CSS iniciais
+## Tokens CSS
 
-```css
-:root {
-  --color-bg: #030817;
-  --color-surface: #07142B;
-  --color-blue: #147BFF;
-  --color-purple: #8B2CFF;
-  --color-terracotta: #C24724;
-  --color-terracotta-glow: #FF6A32;
-  --color-text: #F4F7FF;
-  --color-text-muted: #AAB8D0;
-  --color-success: #25D978;
+Os tokens estão definidos em `src/styles/brand-tokens.css`. Componentes devem consumir os tokens, evitando valores de cor soltos e inconsistentes.
 
-  --glow-terracotta: 0 0 18px rgb(255 106 50 / 28%);
-  --glow-blue: 0 0 18px rgb(20 123 255 / 28%);
-}
-```
-
-## Referência de aplicação
-
-A imagem enviada pelo usuário é a referência visual para o equilíbrio entre painéis escuros, contornos azuis, roxos e acentos terracota. Esta especificação documenta a direção visual para ser aplicada aos componentes da interface na etapa de implementação.
+## Responsividade e acessibilidade
+Manter contraste legível, foco visível e estados hover/active/focus consistentes em desktop e dispositivos móveis. Não usar apenas a cor para comunicar sucesso, erro ou seleção.
